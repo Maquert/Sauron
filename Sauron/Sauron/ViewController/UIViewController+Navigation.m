@@ -9,8 +9,7 @@
 #import "UIViewController+Navigation.h"
 
 // Utils
-#import "MHJViewNavigatorFormats.h"
-#import "UIViewController+Utils.h"
+#import "MHJSauronErrorFormats.h"
 
 
 @implementation UIViewController (Navigation)

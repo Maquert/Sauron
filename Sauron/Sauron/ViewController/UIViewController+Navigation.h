@@ -8,25 +8,20 @@
 
 @import UIKit;
 
-
 @class MHJViewNavigator;
 
-#import "StoryboardsHeader.h"
-#import "MHJStoryboardBuilder.h"
-#import "UIViewController+Segues.h"
 
 @interface UIViewController (Navigation)
 
-
 #pragma mark - Instance Methods
 
-// Push to another View
+// Push to another Viewcontroller
 -(UIViewController *) pushToStoryboardNamed:(NSString *) storyboardName
                          withViewIdentifier:(NSString *) viewIdentifier
                     returningViewController:(void (^)(id nextVC)) block;
 
 
-// Present as Modal View
+// Present as Modal Viewcontroller
 -(UIViewController *) presentStoryboardNamed:(NSString *) storyboardName
                           withViewIdentifier:(NSString *) viewIdentifier
                      returningViewController:(void (^)(id nextVC)) block;
