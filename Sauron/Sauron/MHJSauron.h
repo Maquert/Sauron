@@ -29,10 +29,13 @@
 +(UIViewController *) pushToStoryboardNamed:(NSString *) storyboardName
                          withViewIdentifier:(NSString *) viewIdentifier
                     returningViewController:(void (^)(id nextVC)) block;
+
 +(UIViewController *) pushToStoryboardNamed:(NSString *)storyboardName
                          withViewIdentifier:(NSString *)viewIdentifier
                          fromViewController:(UIViewController *) currentVC
                     returningViewController:(void (^)(id nextVC))block;
+
+
 
 
 // Present as Modal View
@@ -40,7 +43,7 @@
                           withViewIdentifier:(NSString *) viewIdentifier
                           fromViewController:(UIViewController *) currentViewController
                      returningViewController:(void (^)(id nextVC)) block;
-// Adding Navigation Controller
+// Adding Navigation Controller in the process
 +(UIViewController *) hookStoryboardNamed:(NSString *) storyboardName
                        withViewIdentifier:(NSString *) viewIdentifier
                        fromViewController:(UIViewController *) currentViewController
