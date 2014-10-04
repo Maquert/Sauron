@@ -10,9 +10,9 @@
 #define Sauron_MHJStoryboardsHeader_h
 
 
-#define SB_SAURON @""
-#define SB_FRODO @""
-#define SB_GANDALF @""
+#define SB_SAURON @"Sauron"
+#define SB_FRODO @"Frodo"
+#define SB_GANDALF @"Gandalf"
 
 
 

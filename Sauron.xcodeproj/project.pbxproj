@@ -17,6 +17,7 @@
 		F53D0E7C19E046F600593316 /* UIViewController+Segues.m in Sources */ = {isa = PBXBuildFile; fileRef = F53D0E7B19E046F600593316 /* UIViewController+Segues.m */; };
 		F53D0E8019E047A100593316 /* UIViewController+Navigation.m in Sources */ = {isa = PBXBuildFile; fileRef = F53D0E7F19E047A100593316 /* UIViewController+Navigation.m */; };
 		F53D0E8419E047EB00593316 /* MHJStoryboardBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = F53D0E8319E047EB00593316 /* MHJStoryboardBuilder.m */; };
+		F53F637119E04B4C006416D1 /* MHJCharacterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F53F637019E04B4C006416D1 /* MHJCharacterVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +45,7 @@
 		F53D0E7119E0441700593316 /* MHJSauron.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MHJSauron.m; path = Sauron/MHJSauron.m; sourceTree = "<group>"; };
 		F53D0E7419E045D200593316 /* UIViewController+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Utils.h"; sourceTree = "<group>"; };
 		F53D0E7519E045D200593316 /* UIViewController+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Utils.m"; sourceTree = "<group>"; };
-		F53D0E7719E045F100593316 /* MHJSauronErrorFormats.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MHJSauronErrorFormats.h; sourceTree = "<group>"; };
+		F53D0E7719E045F100593316 /* MHJSauronErrorFormats.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MHJSauronErrorFormats.h; path = Sauron/Utils/MHJSauronErrorFormats.h; sourceTree = "<group>"; };
 		F53D0E7A19E046F600593316 /* UIViewController+Segues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Segues.h"; sourceTree = "<group>"; };
 		F53D0E7B19E046F600593316 /* UIViewController+Segues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Segues.m"; sourceTree = "<group>"; };
 		F53D0E7E19E047A100593316 /* UIViewController+Navigation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Navigation.h"; sourceTree = "<group>"; };
@@ -52,6 +53,8 @@
 		F53D0E8219E047EB00593316 /* MHJStoryboardBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHJStoryboardBuilder.h; sourceTree = "<group>"; };
 		F53D0E8319E047EB00593316 /* MHJStoryboardBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHJStoryboardBuilder.m; sourceTree = "<group>"; };
 		F53D0E8A19E048ED00593316 /* MHJStoryboardsHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MHJStoryboardsHeader.h; path = View/Storyboard/MHJStoryboardsHeader.h; sourceTree = "<group>"; };
+		F53F636F19E04B4C006416D1 /* MHJCharacterVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MHJCharacterVC.h; path = Controller/MHJCharacterVC.h; sourceTree = "<group>"; };
+		F53F637019E04B4C006416D1 /* MHJCharacterVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MHJCharacterVC.m; path = Controller/MHJCharacterVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +148,7 @@
 			children = (
 				F53D0E7019E0441700593316 /* MHJSauron.h */,
 				F53D0E7119E0441700593316 /* MHJSauron.m */,
+				F53D0E7719E045F100593316 /* MHJSauronErrorFormats.h */,
 				F53D0E7D19E047A100593316 /* ViewController */,
 				F53D0E8119E047EB00593316 /* Builders */,
 				F53D0E7919E046F600593316 /* Segues */,
@@ -158,7 +162,6 @@
 			children = (
 				F53D0E7419E045D200593316 /* UIViewController+Utils.h */,
 				F53D0E7519E045D200593316 /* UIViewController+Utils.m */,
-				F53D0E7719E045F100593316 /* MHJSauronErrorFormats.h */,
 			);
 			name = Utils;
 			path = Sauron/Utils;
@@ -213,6 +216,8 @@
 		F53D0E8719E048A800593316 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				F53F636F19E04B4C006416D1 /* MHJCharacterVC.h */,
+				F53F637019E04B4C006416D1 /* MHJCharacterVC.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -336,6 +341,7 @@
 				F53D0E8419E047EB00593316 /* MHJStoryboardBuilder.m in Sources */,
 				F53D0E7C19E046F600593316 /* UIViewController+Segues.m in Sources */,
 				F53D0E7619E045D200593316 /* UIViewController+Utils.m in Sources */,
+				F53F637119E04B4C006416D1 /* MHJCharacterVC.m in Sources */,
 				F53D0E7219E0441700593316 /* MHJSauron.m in Sources */,
 				F53D0E5419E043C300593316 /* AppDelegate.m in Sources */,
 				F53D0E5119E043C300593316 /* main.m in Sources */,
@@ -523,6 +529,7 @@
 				F53D0E6A19E043C300593316 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F53D0E6B19E043C300593316 /* Build configuration list for PBXNativeTarget "SauronTests" */ = {
 			isa = XCConfigurationList;
@@ -531,6 +538,7 @@
 				F53D0E6D19E043C300593316 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
