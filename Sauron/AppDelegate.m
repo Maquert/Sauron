@@ -10,8 +10,7 @@
 
 // Sauron
 #import "MHJStoryboardsHeader.h"
-#import "MHJSauron.h"
-#import "MHJStoryboardBuilder.h"
+#import "Sauron.h"
 
 @interface AppDelegate ()
 
