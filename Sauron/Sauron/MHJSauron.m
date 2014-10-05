@@ -49,13 +49,15 @@
 }
 
 
+
+
 #pragma mark - Push ViewController
 
 +(UIViewController *) pushToStoryboardNamed:(NSString *)storyboardName
                          withViewIdentifier:(NSString *)viewIdentifier
                     returningViewController:(void (^)(id nextVC))block
 {
-    UIViewController *currentVC = [self nextVisibleViewController];
+    UIViewController *currentVC = [self nextVisibleViewController:nil];
     UIViewController *nextVC = [self pushToStoryboardNamed:storyboardName
                                         withViewIdentifier:viewIdentifier
                                         fromViewController:currentVC
@@ -199,10 +201,19 @@
     }
 }
 
-+(UIViewController *) nextVisibleViewController
++(UIViewController *) nextVisibleViewController:(UINavigationController *) navVC
 {
-    UIViewController *rootVC = [self appRootVC];
-    UIViewController *visibleVC = [rootVC.navigationController visibleViewController];
+    if (navVC == nil) {
+        if ([[self appRootVC] isNavigationController]) {
+            navVC = (UINavigationController *)[self appRootVC];
+        }
+        else {
+            NSLog(@"[%@] Error: No navigation controller was found for '%@'", [self class], [self appRootVC]);
+        }
+    }
+    
+    
+    UIViewController *visibleVC = [navVC visibleViewController];
     return visibleVC;
 }
 

@@ -30,6 +30,11 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
     UITabBarController *tabVC = [MHJStoryboardBuilder tabBarControllerWithStoryboardNames:@[SB_FRODO, SB_GANDALF,SB_SAURON]];
     [self.window setRootViewController:tabVC];
     
+    //[MHJSauron switchToStoryboardNamed:SB_FRODO withViewIdentifier:nil returningViewController:nil];
+    
+    /*UIStoryboard *storyboard = [UIStoryboard storyboardWithName:SB_FRODO bundle:nil];
+    UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:[storyboard instantiateViewControllerWithIdentifier:VIEW_IDENTIFIER_DETAIL]];
+    [self.window setRootViewController:navVC];*/
     
     [self.window makeKeyAndVisible];
     return YES;
