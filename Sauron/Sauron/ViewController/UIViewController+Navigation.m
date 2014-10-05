@@ -10,6 +10,7 @@
 
 // Utils
 #import "MHJSauronErrorFormats.h"
+#import "UIViewController+Utils.h"
 
 
 @implementation UIViewController (Navigation)
@@ -24,25 +25,32 @@
     UIStoryboard *storyboard = [self storyboardNamed:storyboardName];
     UIViewController *nextController = [self instantiateStoryboard:storyboard withViewIdentifier:viewIdentifier];
     
-    if ([nextController isNavigationController]) {
-        UINavigationController *navVC = (UINavigationController *) nextController;
-        UIViewController *nextVC = [[navVC viewControllers] firstObject];
-        if (block) {
-            block(nextVC);
-        }
-        [self.navigationController pushViewController:navVC animated:YES];
+    if ([self isPushSupportedForViewController:nextController] == NO) {
+        return nil;
     }
-    else {
-        UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:nextController];
-        if (block) {
-            block(nextController);
-        }
-        [self.navigationController pushViewController:navVC animated:YES];
+    
+    if (block) {
+        block(nextController);
+    }
+    
+    if (self.navigationController) {
+        [self.navigationController pushViewController:nextController animated:YES];
     }
     
     return nextController;
 }
 
+
+
+-(BOOL) isPushSupportedForViewController:(UIViewController*) viewController
+{
+    if ([viewController isNavigationController]) {
+        NSLog(ERROR_PUSHING_NAVIGATION_CONTROLLER_NOT_SUPPORTED, [self class], viewController);
+        return NO;
+    }
+    
+    return YES;
+}
 
 
 

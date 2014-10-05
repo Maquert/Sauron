@@ -195,12 +195,9 @@
     for (UIStoryboard *storyboard in storyboards) {
         UIViewController *viewController = [storyboard instantiateInitialViewController];
     
-        UINavigationController *navVC = viewController.navigationController;
-        if (navVC == nil) {
-            navVC = [[UINavigationController alloc] initWithRootViewController:viewController];
+        if (viewController != nil) {
+            [controllersMutable addObject:viewController];
         }
-        
-        [controllersMutable addObject:navVC];
     }
     
     return [controllersMutable copy];
