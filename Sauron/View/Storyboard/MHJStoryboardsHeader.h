@@ -10,10 +10,13 @@
 #define Sauron_MHJStoryboardsHeader_h
 
 
+// Storyboards
 #define SB_SAURON @"Sauron"
 #define SB_FRODO @"Frodo"
 #define SB_GANDALF @"Gandalf"
 
 
+// ViewIdentifiers
+#define VIEW_IDENTIFIER_DETAIL @"DetailVC"
 
 #endif

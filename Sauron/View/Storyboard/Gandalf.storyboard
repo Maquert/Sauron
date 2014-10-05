@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="IrH-Qb-bgj">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+    </dependencies>
+    <scenes>
+        <!--Gandalf-->
+        <scene sceneID="tH1-Jg-UDg">
+            <objects>
+                <viewController storyboardIdentifier="DetailVC" title="Gandalf" useStoryboardIdentifierAsRestorationIdentifier="YES" id="QhA-7e-f5q" customClass="MHJCharacterVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DmP-bw-t1F"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZcE-dM-skm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="u4D-jM-I29">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gandalf" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="200" translatesAutoresizingMaskIntoConstraints="NO" id="NkP-31-K77">
+                                <rect key="frame" x="0.0" y="270" width="600" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Djy-69-thQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="30"/>
+                                <color key="textColor" red="0.059421705159999998" green="0.059421705159999998" blue="0.059421705159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ITd-2F-K6H">
+                                <rect key="frame" x="16" y="550" width="283" height="30"/>
+                                <state key="normal" title="Frodo (modal)">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="frodoButtonTapped:" destination="QhA-7e-f5q" eventType="touchUpInside" id="Voe-8w-QFW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XSK-Hg-k1z">
+                                <rect key="frame" x="309" y="544" width="283" height="42"/>
+                                <state key="normal" title="Sauron (push)">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sauronButtonTapped:" destination="QhA-7e-f5q" eventType="touchUpInside" id="3Te-iX-2X8"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to dismiss" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zmy-M7-jl2">
+                                <rect key="frame" x="16" y="72" width="568" height="20.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="0.2513162364" green="0.2513162364" blue="0.2513162364" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="zmy-M7-jl2" secondAttribute="trailing" constant="16" id="2yl-Qa-j1i"/>
+                            <constraint firstItem="XSK-Hg-k1z" firstAttribute="leading" secondItem="ITd-2F-K6H" secondAttribute="trailing" constant="10" id="Mxj-XZ-vRP"/>
+                            <constraint firstAttribute="trailing" secondItem="XSK-Hg-k1z" secondAttribute="trailing" constant="8" id="Pu2-nR-CrK"/>
+                            <constraint firstItem="ITd-2F-K6H" firstAttribute="leading" secondItem="u4D-jM-I29" secondAttribute="leading" constant="16" id="VWJ-qa-9Fz"/>
+                            <constraint firstItem="ZcE-dM-skm" firstAttribute="top" secondItem="ITd-2F-K6H" secondAttribute="bottom" constant="20" id="cda-a4-f52"/>
+                            <constraint firstItem="NkP-31-K77" firstAttribute="leading" secondItem="u4D-jM-I29" secondAttribute="leading" id="dZU-dY-4JN"/>
+                            <constraint firstAttribute="centerY" secondItem="NkP-31-K77" secondAttribute="centerY" id="g8n-rc-thZ"/>
+                            <constraint firstItem="zmy-M7-jl2" firstAttribute="leading" secondItem="u4D-jM-I29" secondAttribute="leading" constant="16" id="gMw-rk-0Wm"/>
+                            <constraint firstItem="XSK-Hg-k1z" firstAttribute="width" secondItem="ITd-2F-K6H" secondAttribute="width" id="ptM-Nw-zgT"/>
+                            <constraint firstItem="ZcE-dM-skm" firstAttribute="top" secondItem="XSK-Hg-k1z" secondAttribute="bottom" constant="14" id="qsJ-qz-DA8"/>
+                            <constraint firstAttribute="centerX" secondItem="NkP-31-K77" secondAttribute="centerX" id="sog-LQ-FH9"/>
+                            <constraint firstAttribute="trailing" secondItem="NkP-31-K77" secondAttribute="trailing" id="vmV-eD-LSj"/>
+                            <constraint firstItem="zmy-M7-jl2" firstAttribute="top" secondItem="DmP-bw-t1F" secondAttribute="bottom" constant="8" id="wAI-Zz-Cge"/>
+                            <constraint firstItem="XSK-Hg-k1z" firstAttribute="centerY" secondItem="ITd-2F-K6H" secondAttribute="centerY" id="ym9-rq-QAh"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Gandalf" id="Z3E-q1-SnM"/>
+                    <connections>
+                        <outlet property="instructions" destination="zmy-M7-jl2" id="mkm-OE-va7"/>
+                        <outlet property="name" destination="NkP-31-K77" id="amf-Ug-2LW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M03-YG-G8g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1130" y="375"/>
+        </scene>
+        <!--Gandalf-->
+        <scene sceneID="KgU-co-zkm">
+            <objects>
+                <navigationController storyboardIdentifier="GandalfNav" title="Gandalf" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" hidesBarsOnSwipe="YES" id="IrH-Qb-bgj" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ryW-DG-bgL">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="tit-kE-trr">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="QhA-7e-f5q" kind="relationship" relationship="rootViewController" id="BDb-PB-6gl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OgV-4G-HLJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="318" y="375"/>
+        </scene>
+    </scenes>
+</document>

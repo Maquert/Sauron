@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="IRB-cP-Suh">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+    </dependencies>
+    <scenes>
+        <!--Sauron-->
+        <scene sceneID="EnB-GT-o5j">
+            <objects>
+                <viewController storyboardIdentifier="DetailVC" title="Sauron" useStoryboardIdentifierAsRestorationIdentifier="YES" id="tMT-Bz-K1X" customClass="MHJCharacterVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3yT-wX-u5X"/>
+                        <viewControllerLayoutGuide type="bottom" id="uQE-MH-9Kk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="945-Mc-VjN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sauron" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="200" translatesAutoresizingMaskIntoConstraints="NO" id="71W-0X-ADE">
+                                <rect key="frame" x="0.0" y="270" width="600" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="nIe-m6-DeR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="30"/>
+                                <color key="textColor" red="0.059421705159999998" green="0.059421705159999998" blue="0.059421705159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1lr-p1-5RS">
+                                <rect key="frame" x="310" y="550" width="274" height="30"/>
+                                <state key="normal" title="Gandalf (interrupts)">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="gandalfButtonTapped:" destination="tMT-Bz-K1X" eventType="touchUpInside" id="ndX-uX-mWT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S51-ce-gTY">
+                                <rect key="frame" x="16" y="550" width="274" height="30"/>
+                                <state key="normal" title="Frodo (modal)">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="frodoButtonTapped:" destination="tMT-Bz-K1X" eventType="touchUpInside" id="B5W-zn-g2T"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to dismiss" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z1r-vU-JNx">
+                                <rect key="frame" x="16" y="77" width="568" height="20.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="0.25131623641304346" green="0.25131623641304346" blue="0.25131623641304346" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="71W-0X-ADE" secondAttribute="trailing" id="7Gf-qe-Se7"/>
+                            <constraint firstItem="uQE-MH-9Kk" firstAttribute="top" secondItem="1lr-p1-5RS" secondAttribute="bottom" constant="8" id="8U7-99-Itd"/>
+                            <constraint firstAttribute="centerX" secondItem="71W-0X-ADE" secondAttribute="centerX" id="8hv-iA-nqR"/>
+                            <constraint firstAttribute="trailing" secondItem="z1r-vU-JNx" secondAttribute="trailing" constant="16" id="DfT-DZ-qjc"/>
+                            <constraint firstAttribute="trailing" secondItem="1lr-p1-5RS" secondAttribute="trailing" constant="16" id="Gs3-zX-Cre"/>
+                            <constraint firstItem="1lr-p1-5RS" firstAttribute="centerY" secondItem="S51-ce-gTY" secondAttribute="centerY" id="LVW-dm-meD"/>
+                            <constraint firstItem="1lr-p1-5RS" firstAttribute="leading" secondItem="S51-ce-gTY" secondAttribute="trailing" constant="20" id="Nct-B2-o2k"/>
+                            <constraint firstItem="z1r-vU-JNx" firstAttribute="top" secondItem="3yT-wX-u5X" secondAttribute="bottom" constant="13" id="TH7-A3-SP0"/>
+                            <constraint firstItem="S51-ce-gTY" firstAttribute="leading" secondItem="945-Mc-VjN" secondAttribute="leading" constant="16" id="auB-nG-qGn"/>
+                            <constraint firstItem="1lr-p1-5RS" firstAttribute="width" secondItem="S51-ce-gTY" secondAttribute="width" id="ctR-58-JLc"/>
+                            <constraint firstItem="1lr-p1-5RS" firstAttribute="height" secondItem="S51-ce-gTY" secondAttribute="height" id="dgP-kO-uUy"/>
+                            <constraint firstAttribute="centerY" secondItem="71W-0X-ADE" secondAttribute="centerY" id="kBA-ZB-VPB"/>
+                            <constraint firstItem="uQE-MH-9Kk" firstAttribute="top" secondItem="S51-ce-gTY" secondAttribute="bottom" constant="20" id="lTy-MQ-DCQ"/>
+                            <constraint firstItem="71W-0X-ADE" firstAttribute="leading" secondItem="945-Mc-VjN" secondAttribute="leading" id="md0-Gx-tyg"/>
+                            <constraint firstItem="z1r-vU-JNx" firstAttribute="leading" secondItem="945-Mc-VjN" secondAttribute="leading" constant="16" id="tnQ-Ed-2rI"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="8U7-99-Itd"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="goo-q0-jIi"/>
+                    <connections>
+                        <outlet property="instructions" destination="z1r-vU-JNx" id="5J6-Uk-Vgt"/>
+                        <outlet property="name" destination="71W-0X-ADE" id="BS1-y6-hHd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CKF-L2-UoH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="911" y="377"/>
+        </scene>
+        <!--Sauron-->
+        <scene sceneID="0Uj-Xe-iJ4">
+            <objects>
+                <navigationController storyboardIdentifier="SauronNav" title="Sauron" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" hidesBarsOnSwipe="YES" id="IRB-cP-Suh" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="IVP-9l-msy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="tMT-Bz-K1X" kind="relationship" relationship="rootViewController" id="sv4-Kv-ewp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Raf-Su-Muz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="99" y="377"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="2xg-x1-V2m">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+    </dependencies>
+    <scenes>
+        <!--Frodo-->
+        <scene sceneID="S5J-88-NqO">
+            <objects>
+                <viewController storyboardIdentifier="DetailVC" title="Frodo" useStoryboardIdentifierAsRestorationIdentifier="YES" id="iVU-xg-LtJ" customClass="MHJCharacterVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Iyr-gF-Psh"/>
+                        <viewControllerLayoutGuide type="bottom" id="ptx-CF-Aa4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Z5K-M7-9T5">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Frodo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="200" translatesAutoresizingMaskIntoConstraints="NO" id="G5a-En-DZA">
+                                <rect key="frame" x="0.0" y="270" width="600" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="akE-zp-HrG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="30"/>
+                                <color key="textColor" red="0.059421705163043459" green="0.059421705163043459" blue="0.059421705163043459" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dK1-zK-uSn">
+                                <rect key="frame" x="16" y="550" width="274" height="30"/>
+                                <state key="normal" title="Gandalf (interrupts)">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="gandalfButtonTapped:" destination="iVU-xg-LtJ" eventType="touchUpInside" id="wzL-SU-hZZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e16-lp-d94">
+                                <rect key="frame" x="310" y="550" width="274" height="30"/>
+                                <state key="normal" title="Sauron (push)">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sauronButtonTapped:" destination="iVU-xg-LtJ" eventType="touchUpInside" id="xuQ-Oc-tqZ"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to dismiss" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5aU-9d-Avj">
+                                <rect key="frame" x="16" y="72" width="568" height="20.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="0.2513162364" green="0.2513162364" blue="0.2513162364" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="G5a-En-DZA" secondAttribute="centerX" id="Ds1-Ff-CbS"/>
+                            <constraint firstItem="e16-lp-d94" firstAttribute="centerY" secondItem="dK1-zK-uSn" secondAttribute="centerY" id="KeY-4x-aFv"/>
+                            <constraint firstItem="5aU-9d-Avj" firstAttribute="top" secondItem="Iyr-gF-Psh" secondAttribute="bottom" constant="8" id="Mar-7l-hv5"/>
+                            <constraint firstItem="e16-lp-d94" firstAttribute="width" secondItem="dK1-zK-uSn" secondAttribute="width" id="QbR-iv-cZJ"/>
+                            <constraint firstAttribute="trailing" secondItem="G5a-En-DZA" secondAttribute="trailing" id="SIp-mB-FXf"/>
+                            <constraint firstAttribute="centerY" secondItem="G5a-En-DZA" secondAttribute="centerY" id="TLb-Lr-I7x"/>
+                            <constraint firstItem="5aU-9d-Avj" firstAttribute="leading" secondItem="Z5K-M7-9T5" secondAttribute="leading" constant="16" id="Wsl-DL-kMr"/>
+                            <constraint firstAttribute="trailing" secondItem="5aU-9d-Avj" secondAttribute="trailing" constant="16" id="dyJ-8r-beV"/>
+                            <constraint firstItem="dK1-zK-uSn" firstAttribute="leading" secondItem="Z5K-M7-9T5" secondAttribute="leading" constant="16" id="jxW-cx-3Te"/>
+                            <constraint firstItem="G5a-En-DZA" firstAttribute="leading" secondItem="Z5K-M7-9T5" secondAttribute="leading" id="kEX-Vl-kSV"/>
+                            <constraint firstItem="ptx-CF-Aa4" firstAttribute="top" secondItem="dK1-zK-uSn" secondAttribute="bottom" constant="20" id="mF9-8b-aiS"/>
+                            <constraint firstItem="e16-lp-d94" firstAttribute="leading" secondItem="dK1-zK-uSn" secondAttribute="trailing" constant="20" id="qu2-tK-FD4"/>
+                            <constraint firstItem="e16-lp-d94" firstAttribute="height" secondItem="dK1-zK-uSn" secondAttribute="height" id="soj-SZ-H1E"/>
+                            <constraint firstAttribute="trailing" secondItem="e16-lp-d94" secondAttribute="trailing" constant="16" id="vvB-XU-Rkc"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Frodo" id="aLQ-YX-Da4"/>
+                    <connections>
+                        <outlet property="instructions" destination="5aU-9d-Avj" id="GTY-xM-eSY"/>
+                        <outlet property="name" destination="G5a-En-DZA" id="wXB-cd-42y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8ZT-K1-327" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="879" y="370"/>
+        </scene>
+        <!--Frodo-->
+        <scene sceneID="XMp-xY-fa7">
+            <objects>
+                <navigationController storyboardIdentifier="FrodoNav" title="Frodo" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" hidesBarsOnSwipe="YES" id="2xg-x1-V2m" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6dy-1V-jS5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="iVU-xg-LtJ" kind="relationship" relationship="rootViewController" id="w8L-ou-lil"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lPo-XC-zqX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="370"/>
+        </scene>
+    </scenes>
+</document>

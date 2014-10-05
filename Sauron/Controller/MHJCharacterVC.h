@@ -12,9 +12,14 @@
 
 @interface MHJCharacterVC : UIViewController
 
+#pragma mark - Outlets
+@property (nonatomic, weak) IBOutlet UILabel *name;
+@property (nonatomic, weak) IBOutlet UILabel *instructions;
+
+#pragma mark - Public Properties
+@property (nonatomic) BOOL isPresented;
 
 #pragma mark - Initial Setup
--(void) setupTouchEvents;
 
 
 @end

@@ -18,6 +18,9 @@
 		F53D0E8019E047A100593316 /* UIViewController+Navigation.m in Sources */ = {isa = PBXBuildFile; fileRef = F53D0E7F19E047A100593316 /* UIViewController+Navigation.m */; };
 		F53D0E8419E047EB00593316 /* MHJStoryboardBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = F53D0E8319E047EB00593316 /* MHJStoryboardBuilder.m */; };
 		F53F637119E04B4C006416D1 /* MHJCharacterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F53F637019E04B4C006416D1 /* MHJCharacterVC.m */; };
+		F5C6AB2E19E172F60067DFE5 /* Frodo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5C6AB2D19E172F60067DFE5 /* Frodo.storyboard */; };
+		F5C6AB3019E175140067DFE5 /* Gandalf.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5C6AB2F19E175140067DFE5 /* Gandalf.storyboard */; };
+		F5C6AB3219E175210067DFE5 /* Sauron.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5C6AB3119E175210067DFE5 /* Sauron.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,9 @@
 		F53D0E8A19E048ED00593316 /* MHJStoryboardsHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MHJStoryboardsHeader.h; path = View/Storyboard/MHJStoryboardsHeader.h; sourceTree = "<group>"; };
 		F53F636F19E04B4C006416D1 /* MHJCharacterVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MHJCharacterVC.h; path = Controller/MHJCharacterVC.h; sourceTree = "<group>"; };
 		F53F637019E04B4C006416D1 /* MHJCharacterVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MHJCharacterVC.m; path = Controller/MHJCharacterVC.m; sourceTree = "<group>"; };
+		F5C6AB2D19E172F60067DFE5 /* Frodo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Frodo.storyboard; path = View/Storyboard/Frodo.storyboard; sourceTree = "<group>"; };
+		F5C6AB2F19E175140067DFE5 /* Gandalf.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Gandalf.storyboard; path = View/Storyboard/Gandalf.storyboard; sourceTree = "<group>"; };
+		F5C6AB3119E175210067DFE5 /* Sauron.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Sauron.storyboard; path = View/Storyboard/Sauron.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,6 +240,9 @@
 			isa = PBXGroup;
 			children = (
 				F53D0E8A19E048ED00593316 /* MHJStoryboardsHeader.h */,
+				F5C6AB2D19E172F60067DFE5 /* Frodo.storyboard */,
+				F5C6AB2F19E175140067DFE5 /* Gandalf.storyboard */,
+				F5C6AB3119E175210067DFE5 /* Sauron.storyboard */,
 			);
 			name = Storyboard;
 			sourceTree = "<group>";
@@ -319,7 +328,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F53D0E5919E043C300593316 /* LaunchScreen.xib in Resources */,
+				F5C6AB3219E175210067DFE5 /* Sauron.storyboard in Resources */,
 				F53D0E5619E043C300593316 /* Images.xcassets in Resources */,
+				F5C6AB3019E175140067DFE5 /* Gandalf.storyboard in Resources */,
+				F5C6AB2E19E172F60067DFE5 /* Frodo.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
