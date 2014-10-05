@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="IrH-Qb-bgj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="QhA-7e-f5q">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gandalf" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="200" translatesAutoresizingMaskIntoConstraints="NO" id="NkP-31-K77">
-                                <rect key="frame" x="0.0" y="270" width="600" height="60"/>
+                                <rect key="frame" x="0.0" y="230" width="600" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="Djy-69-thQ"/>
                                 </constraints>
@@ -44,7 +44,7 @@
                                 </connections>
                             </button>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to dismiss" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zmy-M7-jl2">
-                                <rect key="frame" x="16" y="72" width="568" height="20.5"/>
+                                <rect key="frame" x="16" y="28" width="568" height="20.5"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" red="0.2513162364" green="0.2513162364" blue="0.2513162364" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -58,7 +58,7 @@
                             <constraint firstItem="ITd-2F-K6H" firstAttribute="leading" secondItem="u4D-jM-I29" secondAttribute="leading" constant="16" id="VWJ-qa-9Fz"/>
                             <constraint firstItem="ZcE-dM-skm" firstAttribute="top" secondItem="ITd-2F-K6H" secondAttribute="bottom" constant="20" id="cda-a4-f52"/>
                             <constraint firstItem="NkP-31-K77" firstAttribute="leading" secondItem="u4D-jM-I29" secondAttribute="leading" id="dZU-dY-4JN"/>
-                            <constraint firstAttribute="centerY" secondItem="NkP-31-K77" secondAttribute="centerY" id="g8n-rc-thZ"/>
+                            <constraint firstAttribute="centerY" secondItem="NkP-31-K77" secondAttribute="centerY" constant="40" id="g8n-rc-thZ"/>
                             <constraint firstItem="zmy-M7-jl2" firstAttribute="leading" secondItem="u4D-jM-I29" secondAttribute="leading" constant="16" id="gMw-rk-0Wm"/>
                             <constraint firstItem="XSK-Hg-k1z" firstAttribute="width" secondItem="ITd-2F-K6H" secondAttribute="width" id="ptM-Nw-zgT"/>
                             <constraint firstItem="ZcE-dM-skm" firstAttribute="top" secondItem="XSK-Hg-k1z" secondAttribute="bottom" constant="14" id="qsJ-qz-DA8"/>
@@ -77,27 +77,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M03-YG-G8g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1130" y="375"/>
-        </scene>
-        <!--Gandalf-->
-        <scene sceneID="KgU-co-zkm">
-            <objects>
-                <navigationController storyboardIdentifier="GandalfNav" title="Gandalf" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" hidesBarsOnSwipe="YES" id="IrH-Qb-bgj" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ryW-DG-bgL">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="tit-kE-trr">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </toolbar>
-                    <connections>
-                        <segue destination="QhA-7e-f5q" kind="relationship" relationship="rootViewController" id="BDb-PB-6gl"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="OgV-4G-HLJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="318" y="375"/>
         </scene>
     </scenes>
 </document>

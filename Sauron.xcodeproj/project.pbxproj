@@ -61,6 +61,7 @@
 		F5C6AB2D19E172F60067DFE5 /* Frodo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Frodo.storyboard; path = View/Storyboard/Frodo.storyboard; sourceTree = "<group>"; };
 		F5C6AB2F19E175140067DFE5 /* Gandalf.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Gandalf.storyboard; path = View/Storyboard/Gandalf.storyboard; sourceTree = "<group>"; };
 		F5C6AB3119E175210067DFE5 /* Sauron.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Sauron.storyboard; path = View/Storyboard/Sauron.storyboard; sourceTree = "<group>"; };
+		F5C6AB3519E19E630067DFE5 /* Sauron.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Sauron.h; path = Sauron/Sauron.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +153,7 @@
 		F53D0E6F19E043D700593316 /* Sauron */ = {
 			isa = PBXGroup;
 			children = (
+				F5C6AB3519E19E630067DFE5 /* Sauron.h */,
 				F53D0E7019E0441700593316 /* MHJSauron.h */,
 				F53D0E7119E0441700593316 /* MHJSauron.m */,
 				F53D0E7719E045F100593316 /* MHJSauronErrorFormats.h */,

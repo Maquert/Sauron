@@ -10,8 +10,7 @@
 
 // Navigation
 #import "MHJStoryboardsHeader.h"
-#import "MHJSauron.h"
-#import "UIViewController+Navigation.h"
+#import "Sauron.h"
 
 
 
@@ -44,7 +43,7 @@
 -(void) addTapToClose
 {
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self
-                                                                          action:@selector(closeView:)];
+                                                                          action:@selector(viewTapped:)];
     [self.view addGestureRecognizer:tap];
 }
 
@@ -66,8 +65,7 @@
 {
     [self interruptNavigationWithStoryboardNamed:SB_GANDALF];
 }
-
--(void) closeView:(id) sender
+-(void) viewTapped:(id) sender
 {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
@@ -80,16 +78,21 @@
 -(void) pushToStoryboardNamed:(NSString *) storyboardName
 {
     [self pushToStoryboardNamed:storyboardName
-             withViewIdentifier:VIEW_IDENTIFIER_DETAIL
+             withViewIdentifier:nil
         returningViewController:^(id nextVC) {
         NSLog(@"[%@] Pushing to %@!", [self class], nextVC);
     }];
+    /*[MHJSauron pushToStoryboardNamed:storyboardName withViewIdentifier:nil fromViewController:self returningViewController:^(id nextVC)
+    {
+        
+    }];*/
 }
 
 
 -(void) presentStoryboardNamed:(NSString *) storyboardName
 {
-    [MHJSauron presentStoryboardNamed:storyboardName withViewIdentifier:VIEW_IDENTIFIER_DETAIL
+    [MHJSauron presentStoryboardNamed:storyboardName
+                   withViewIdentifier:VIEW_IDENTIFIER_DETAIL
                    fromViewController:self
               returningViewController:^(id nextVC) {
                   MHJCharacterVC *characterVC = nextVC;

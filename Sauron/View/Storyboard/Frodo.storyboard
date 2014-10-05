@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Frodo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="200" translatesAutoresizingMaskIntoConstraints="NO" id="G5a-En-DZA">
-                                <rect key="frame" x="0.0" y="270" width="600" height="60"/>
+                                <rect key="frame" x="0.0" y="230" width="600" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="akE-zp-HrG"/>
                                 </constraints>
@@ -57,7 +57,7 @@
                             <constraint firstItem="5aU-9d-Avj" firstAttribute="top" secondItem="Iyr-gF-Psh" secondAttribute="bottom" constant="8" id="Mar-7l-hv5"/>
                             <constraint firstItem="e16-lp-d94" firstAttribute="width" secondItem="dK1-zK-uSn" secondAttribute="width" id="QbR-iv-cZJ"/>
                             <constraint firstAttribute="trailing" secondItem="G5a-En-DZA" secondAttribute="trailing" id="SIp-mB-FXf"/>
-                            <constraint firstAttribute="centerY" secondItem="G5a-En-DZA" secondAttribute="centerY" id="TLb-Lr-I7x"/>
+                            <constraint firstAttribute="centerY" secondItem="G5a-En-DZA" secondAttribute="centerY" constant="40" id="TLb-Lr-I7x"/>
                             <constraint firstItem="5aU-9d-Avj" firstAttribute="leading" secondItem="Z5K-M7-9T5" secondAttribute="leading" constant="16" id="Wsl-DL-kMr"/>
                             <constraint firstAttribute="trailing" secondItem="5aU-9d-Avj" secondAttribute="trailing" constant="16" id="dyJ-8r-beV"/>
                             <constraint firstItem="dK1-zK-uSn" firstAttribute="leading" secondItem="Z5K-M7-9T5" secondAttribute="leading" constant="16" id="jxW-cx-3Te"/>

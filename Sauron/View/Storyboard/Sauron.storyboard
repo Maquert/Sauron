@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="IRB-cP-Suh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="aFF-cG-MRu">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sauron" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="200" translatesAutoresizingMaskIntoConstraints="NO" id="71W-0X-ADE">
-                                <rect key="frame" x="0.0" y="270" width="600" height="60"/>
+                                <rect key="frame" x="0.0" y="230" width="600" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="nIe-m6-DeR"/>
                                 </constraints>
@@ -49,6 +49,15 @@
                                 <color key="textColor" red="0.25131623641304346" green="0.25131623641304346" blue="0.25131623641304346" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S4n-3H-Zo3">
+                                <rect key="frame" x="535" y="485" width="39" height="30"/>
+                                <state key="normal" title="Detail">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="4AG-zh-DEt" kind="show" id="EsZ-Wm-PGD"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -57,13 +66,15 @@
                             <constraint firstAttribute="centerX" secondItem="71W-0X-ADE" secondAttribute="centerX" id="8hv-iA-nqR"/>
                             <constraint firstAttribute="trailing" secondItem="z1r-vU-JNx" secondAttribute="trailing" constant="16" id="DfT-DZ-qjc"/>
                             <constraint firstAttribute="trailing" secondItem="1lr-p1-5RS" secondAttribute="trailing" constant="16" id="Gs3-zX-Cre"/>
+                            <constraint firstItem="1lr-p1-5RS" firstAttribute="trailing" secondItem="S4n-3H-Zo3" secondAttribute="trailing" constant="10" id="LQN-mJ-Hcs"/>
                             <constraint firstItem="1lr-p1-5RS" firstAttribute="centerY" secondItem="S51-ce-gTY" secondAttribute="centerY" id="LVW-dm-meD"/>
                             <constraint firstItem="1lr-p1-5RS" firstAttribute="leading" secondItem="S51-ce-gTY" secondAttribute="trailing" constant="20" id="Nct-B2-o2k"/>
                             <constraint firstItem="z1r-vU-JNx" firstAttribute="top" secondItem="3yT-wX-u5X" secondAttribute="bottom" constant="13" id="TH7-A3-SP0"/>
+                            <constraint firstItem="1lr-p1-5RS" firstAttribute="top" secondItem="S4n-3H-Zo3" secondAttribute="bottom" constant="35" id="YRJ-A6-jZ3"/>
                             <constraint firstItem="S51-ce-gTY" firstAttribute="leading" secondItem="945-Mc-VjN" secondAttribute="leading" constant="16" id="auB-nG-qGn"/>
                             <constraint firstItem="1lr-p1-5RS" firstAttribute="width" secondItem="S51-ce-gTY" secondAttribute="width" id="ctR-58-JLc"/>
                             <constraint firstItem="1lr-p1-5RS" firstAttribute="height" secondItem="S51-ce-gTY" secondAttribute="height" id="dgP-kO-uUy"/>
-                            <constraint firstAttribute="centerY" secondItem="71W-0X-ADE" secondAttribute="centerY" id="kBA-ZB-VPB"/>
+                            <constraint firstAttribute="centerY" secondItem="71W-0X-ADE" secondAttribute="centerY" constant="40" id="kBA-ZB-VPB"/>
                             <constraint firstItem="uQE-MH-9Kk" firstAttribute="top" secondItem="S51-ce-gTY" secondAttribute="bottom" constant="20" id="lTy-MQ-DCQ"/>
                             <constraint firstItem="71W-0X-ADE" firstAttribute="leading" secondItem="945-Mc-VjN" secondAttribute="leading" id="md0-Gx-tyg"/>
                             <constraint firstItem="z1r-vU-JNx" firstAttribute="leading" secondItem="945-Mc-VjN" secondAttribute="leading" constant="16" id="tnQ-Ed-2rI"/>
@@ -74,7 +85,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="goo-q0-jIi"/>
+                    <navigationItem key="navigationItem" title="Sauron" id="goo-q0-jIi"/>
                     <connections>
                         <outlet property="instructions" destination="z1r-vU-JNx" id="5J6-Uk-Vgt"/>
                         <outlet property="name" destination="71W-0X-ADE" id="BS1-y6-hHd"/>
@@ -82,25 +93,93 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CKF-L2-UoH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="911" y="377"/>
+            <point key="canvasLocation" x="1723" y="377"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="7Ew-8v-mwb">
+            <objects>
+                <viewController id="4AG-zh-DEt" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="c37-5L-5JN"/>
+                        <viewControllerLayoutGuide type="bottom" id="FMW-TL-140"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BK4-W2-Vdt">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Sauron" translatesAutoresizingMaskIntoConstraints="NO" id="jtj-KW-yQN">
+                                <rect key="frame" x="0.0" y="64" width="600" height="526"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WAK-2U-vVY">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="3GH-Xz-eTK">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Hj-rA-dTP">
+                                            <rect key="frame" x="166.5" y="220.5" width="267" height="95.5"/>
+                                            <string key="text">One Ring to rule them all, One Ring to find them,
+One Ring to bring them all and in the darkness bind them</string>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <color key="textColor" red="0.96121348505434778" green="0.96121348505434778" blue="0.96121348505434778" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="centerY" secondItem="3Hj-rA-dTP" secondAttribute="centerY" id="Lra-8h-EpJ"/>
+                                        <constraint firstAttribute="centerX" secondItem="3Hj-rA-dTP" secondAttribute="centerX" id="ve0-gZ-gWn"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="dark"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="FMW-TL-140" firstAttribute="top" secondItem="WAK-2U-vVY" secondAttribute="bottom" id="0hD-8k-HlB"/>
+                            <constraint firstItem="WAK-2U-vVY" firstAttribute="top" secondItem="c37-5L-5JN" secondAttribute="bottom" id="2hT-Vz-zWb"/>
+                            <constraint firstItem="jtj-KW-yQN" firstAttribute="leading" secondItem="BK4-W2-Vdt" secondAttribute="leading" id="6TL-CZ-YMt"/>
+                            <constraint firstItem="FMW-TL-140" firstAttribute="top" secondItem="jtj-KW-yQN" secondAttribute="bottom" constant="10" id="E70-Ig-t4k"/>
+                            <constraint firstAttribute="trailing" secondItem="jtj-KW-yQN" secondAttribute="trailing" id="Rzz-jP-1Ss"/>
+                            <constraint firstItem="WAK-2U-vVY" firstAttribute="leading" secondItem="BK4-W2-Vdt" secondAttribute="leading" id="UdR-CW-cQg"/>
+                            <constraint firstAttribute="trailing" secondItem="WAK-2U-vVY" secondAttribute="trailing" id="foC-Ia-UOZ"/>
+                            <constraint firstItem="WAK-2U-vVY" firstAttribute="top" secondItem="c37-5L-5JN" secondAttribute="bottom" id="miy-9g-6cr"/>
+                            <constraint firstItem="WAK-2U-vVY" firstAttribute="leading" secondItem="BK4-W2-Vdt" secondAttribute="leading" id="my3-wN-lD7"/>
+                            <constraint firstItem="FMW-TL-140" firstAttribute="top" secondItem="WAK-2U-vVY" secondAttribute="bottom" id="pwW-ot-58O"/>
+                            <constraint firstItem="jtj-KW-yQN" firstAttribute="top" secondItem="c37-5L-5JN" secondAttribute="bottom" id="xu9-JD-Qiy"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="2hT-Vz-zWb"/>
+                                <exclude reference="my3-wN-lD7"/>
+                                <exclude reference="0hD-8k-HlB"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yru-iB-94H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2399" y="377"/>
         </scene>
         <!--Sauron-->
-        <scene sceneID="0Uj-Xe-iJ4">
+        <scene sceneID="3S0-j7-Vkc">
             <objects>
-                <navigationController storyboardIdentifier="SauronNav" title="Sauron" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" hidesBarsOnSwipe="YES" id="IRB-cP-Suh" sceneMemberID="viewController">
+                <navigationController title="Sauron" automaticallyAdjustsScrollViewInsets="NO" id="aFF-cG-MRu" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="IVP-9l-msy">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="RIW-AX-qTk">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="tMT-Bz-K1X" kind="relationship" relationship="rootViewController" id="sv4-Kv-ewp"/>
+                        <segue destination="tMT-Bz-K1X" kind="relationship" relationship="rootViewController" id="IRB-al-YOs"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Raf-Su-Muz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rkd-cV-Lfl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="99" y="377"/>
+            <point key="canvasLocation" x="911" y="377"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Sauron" width="384" height="384"/>
+    </resources>
 </document>
