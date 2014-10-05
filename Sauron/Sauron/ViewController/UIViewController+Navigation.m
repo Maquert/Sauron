@@ -11,6 +11,7 @@
 // Utils
 #import "MHJSauronErrorFormats.h"
 #import "UIViewController+Utils.h"
+#import "MHJSauron.h"
 
 
 @implementation UIViewController (Navigation)
@@ -24,10 +25,7 @@
 {
     UIStoryboard *storyboard = [self storyboardNamed:storyboardName];
     UIViewController *nextController = [self instantiateStoryboard:storyboard withViewIdentifier:viewIdentifier];
-    
-    if ([self isPushSupportedForViewController:nextController] == NO) {
-        return nil;
-    }
+    nextController = [self pushableViewController:nextController];
     
     if (block) {
         block(nextController);
@@ -36,10 +34,22 @@
     if (self.navigationController) {
         [self.navigationController pushViewController:nextController animated:YES];
     }
+    else {
+        NSLog(ERROR_NO_NAVIGATION_CONTROLLER_FORMAT, [self class], self);
+    }
     
     return nextController;
 }
 
+
+-(UIViewController *) pushableViewController:(UIViewController *) nextVC
+{
+    if ([nextVC isNavigationController]) {
+        nextVC = [(UINavigationController *) nextVC viewControllers].firstObject;
+    }
+    
+    return nextVC;
+}
 
 
 -(BOOL) isPushSupportedForViewController:(UIViewController*) viewController

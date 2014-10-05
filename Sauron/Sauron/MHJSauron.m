@@ -55,22 +55,14 @@
                          withViewIdentifier:(NSString *)viewIdentifier
                     returningViewController:(void (^)(id nextVC))block
 {
-    UIStoryboard *storyboard = [self storyboardNamed:storyboardName];
-    UIViewController *nextController = [self instantiateStoryboard:storyboard withViewIdentifier:viewIdentifier];
+    UIViewController *currentVC = [self nextVisibleViewController];
+    UIViewController *nextVC = [self pushToStoryboardNamed:storyboardName
+                                        withViewIdentifier:viewIdentifier
+                                        fromViewController:currentVC
+                                   returningViewController:block];
     
-    if ([self isPushSupportedForViewController:nextController] == NO) {
-        return nil;
-    }
-    
-    UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:nextController];
-    if (block) {
-        block(nextController);
-    }
-    [self pushFromCurrentVCToNextVC:navVC];
-    
-    return nextController;
+    return nextVC;
 }
-
 
 +(UIViewController *) pushToStoryboardNamed:(NSString *)storyboardName
                          withViewIdentifier:(NSString *)viewIdentifier
@@ -79,10 +71,7 @@
 {
     UIStoryboard *storyboard = [self storyboardNamed:storyboardName];
     UIViewController *nextController = [self instantiateStoryboard:storyboard withViewIdentifier:viewIdentifier];
-    
-    if ([self isPushSupportedForViewController:nextController] == NO) {
-        return nil;
-    }
+    nextController = [self pushableViewController:nextController];
     
     if (block) {
         block(nextController);
@@ -92,12 +81,21 @@
         [currentVC.navigationController pushViewController:nextController animated:YES];
     }
     else {
-        NSLog(ERROR_NO_NAVIGATION_CONTROLLER_FORMAT, [self class]);
+        NSLog(ERROR_NO_NAVIGATION_CONTROLLER_FORMAT, [self class], currentVC);
     }
     
     return nextController;
 }
 
+
++(UIViewController *) pushableViewController:(UIViewController *) nextVC
+{
+    if ([nextVC isNavigationController]) {
+        nextVC = [(UINavigationController *) nextVC viewControllers].firstObject;
+    }
+    
+    return nextVC;
+}
 
 
 +(BOOL) isPushSupportedForViewController:(UIViewController*) viewController
@@ -197,8 +195,15 @@
     }
     else
     {
-        NSLog(ERROR_NO_NAVIGATION_CONTROLLER_FORMAT, [self class]);
+        NSLog(ERROR_NO_NAVIGATION_CONTROLLER_FORMAT, [self class], rootVC);
     }
+}
+
++(UIViewController *) nextVisibleViewController
+{
+    UIViewController *rootVC = [self appRootVC];
+    UIViewController *visibleVC = [rootVC.navigationController visibleViewController];
+    return visibleVC;
 }
 
 

@@ -198,6 +198,9 @@
         if (viewController != nil) {
             [controllersMutable addObject:viewController];
         }
+        else {
+            NSLog(@"[%@] Storyboard '%@' has no Initial ViewController", [self class], [storyboard valueForKey:@"name"]);
+        }
     }
     
     return [controllersMutable copy];
