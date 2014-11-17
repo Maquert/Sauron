@@ -58,3 +58,7 @@ Storyboard Builder
 
 UIViewController+Segues Category (prepareForSegue: convenience methods). 
 —Asks the segue for the class of the next View Controller (instead of the string name of the segue inside the Storyboard).
+
+For your convenience
+--------------------
+Create a .h with all (or many) of your Storyboards file name. This will decrese the amount of typos and will make it very handy to work between many stoyboards along with Sauron.h
