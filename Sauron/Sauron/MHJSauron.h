@@ -22,7 +22,7 @@
 // Re-Assign Root View Controller
 +(UIViewController *) switchToStoryboardNamed:(NSString *) storyboardName
                            withViewIdentifier:(NSString *) viewIdentifier
-                      returningViewController:(void (^)(id nextVC)) block;;
+                      returningViewController:(void (^)(id nextVC)) block;
 
 
 // Push to another View

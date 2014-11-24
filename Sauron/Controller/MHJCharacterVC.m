@@ -84,7 +84,7 @@
     }];
     /*[MHJSauron pushToStoryboardNamed:storyboardName withViewIdentifier:nil fromViewController:self returningViewController:^(id nextVC)
     {
-        
+        NSLog(@"[%@] Pushing to %@!", [self class], nextVC);
     }];*/
     /*
     [MHJSauron pushToStoryboardNamed:storyboardName withViewIdentifier:nil returningViewController:^(id nextVC) {
@@ -95,6 +95,9 @@
 
 -(void) presentStoryboardNamed:(NSString *) storyboardName
 {
+    [self presentStoryboardNamed:storyboardName
+              withViewIdentifier:@"detailVC"
+         returningViewController:nil];
     [MHJSauron presentStoryboardNamed:storyboardName
                    withViewIdentifier:VIEW_IDENTIFIER_DETAIL
                    fromViewController:self
