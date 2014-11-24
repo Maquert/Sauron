@@ -27,23 +27,16 @@
     UIStoryboard *storyboard = [self storyboardNamed:storyboardName];
     UIViewController *nextController = [self instantiateStoryboard:storyboard withViewIdentifier:viewIdentifier];
     
-    if ([nextController isNavigationController]) {
+    if ([nextController isNavigationController] && block != nil) {
         UIViewController *nextVC = [[(UINavigationController *) nextController viewControllers] firstObject];
-        
-        if (block) {
-            block(nextVC);
-        }
-        [self setRootWithController:nextController];
+        block(nextVC);
     }
     else {
-        UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:nextController];
-        
         if (block) {
             block(nextController);
         }
-        
-        [self setRootWithController:navVC];
     }
+    [self setRootWithController:nextController];
     
     return nextController;
 }
