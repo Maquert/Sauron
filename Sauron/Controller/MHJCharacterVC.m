@@ -12,7 +12,7 @@
 #import "MHJStoryboardsHeader.h"
 #import "Sauron.h"
 
-
+#import "Sauron-Swift.h"
 
 @interface MHJCharacterVC ()
 
@@ -49,8 +49,6 @@
 
 
 
-
-
 #pragma mark - Events
 
 -(IBAction) sauronButtonTapped:(id)sender
@@ -77,11 +75,12 @@
 
 -(void) pushToStoryboardNamed:(NSString *) storyboardName
 {
-    [self pushToStoryboardNamed:storyboardName
+ /*   [self pushToStoryboardNamed:storyboardName
              withViewIdentifier:nil
         returningViewController:^(id nextVC) {
         NSLog(@"[%@] Pushing to %@!", [self class], nextVC);
-    }];
+    }];*/
+    [self pushToStoryboard:nil identifier:nil completion:nil];
     /*[MHJSauron pushToStoryboardNamed:storyboardName withViewIdentifier:nil fromViewController:self returningViewController:^(id nextVC)
     {
         NSLog(@"[%@] Pushing to %@!", [self class], nextVC);

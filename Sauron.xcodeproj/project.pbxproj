@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F52B932E1A23B5B700532C80 /* Sauron.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52B932D1A23B5B700532C80 /* Sauron.swift */; };
+		F52B93301A23B8CE00532C80 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52B932F1A23B8CE00532C80 /* Navigation.swift */; };
 		F53D0E5119E043C300593316 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F53D0E5019E043C300593316 /* main.m */; };
 		F53D0E5419E043C300593316 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F53D0E5319E043C300593316 /* AppDelegate.m */; };
 		F53D0E5619E043C300593316 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F53D0E5519E043C300593316 /* Images.xcassets */; };
@@ -22,6 +23,7 @@
 		F5C6AB2E19E172F60067DFE5 /* Frodo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5C6AB2D19E172F60067DFE5 /* Frodo.storyboard */; };
 		F5C6AB3019E175140067DFE5 /* Gandalf.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5C6AB2F19E175140067DFE5 /* Gandalf.storyboard */; };
 		F5C6AB3219E175210067DFE5 /* Sauron.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5C6AB3119E175210067DFE5 /* Sauron.storyboard */; };
+		F5E4A1021A6EE40D007E3728 /* Segues.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E4A1011A6EE40D007E3728 /* Segues.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +39,7 @@
 /* Begin PBXFileReference section */
 		F52B932C1A23B5B700532C80 /* Sauron-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Sauron-Bridging-Header.h"; sourceTree = "<group>"; };
 		F52B932D1A23B5B700532C80 /* Sauron.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Sauron.swift; path = Swift/Sauron.swift; sourceTree = "<group>"; };
+		F52B932F1A23B8CE00532C80 /* Navigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Navigation.swift; path = Swift/Extensions/Navigation.swift; sourceTree = "<group>"; };
 		F53D0E4B19E043C300593316 /* Sauron.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sauron.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F53D0E4F19E043C300593316 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F53D0E5019E043C300593316 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -65,6 +68,7 @@
 		F5C6AB2F19E175140067DFE5 /* Gandalf.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Gandalf.storyboard; path = View/Storyboard/Gandalf.storyboard; sourceTree = "<group>"; };
 		F5C6AB3119E175210067DFE5 /* Sauron.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Sauron.storyboard; path = View/Storyboard/Sauron.storyboard; sourceTree = "<group>"; };
 		F5C6AB3519E19E630067DFE5 /* Sauron.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Sauron.h; path = Sauron/Sauron.h; sourceTree = "<group>"; };
+		F5E4A1011A6EE40D007E3728 /* Segues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Segues.swift; path = Swift/Extensions/Segues.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,8 @@
 			isa = PBXGroup;
 			children = (
 				F52B932D1A23B5B700532C80 /* Sauron.swift */,
+				F52B932F1A23B8CE00532C80 /* Navigation.swift */,
+				F5E4A1011A6EE40D007E3728 /* Segues.swift */,
 				F52B932C1A23B5B700532C80 /* Sauron-Bridging-Header.h */,
 			);
 			name = Swift;
@@ -374,12 +380,14 @@
 			files = (
 				F53D0E8019E047A100593316 /* UIViewController+Navigation.m in Sources */,
 				F53D0E8419E047EB00593316 /* MHJStoryboardBuilder.m in Sources */,
+				F52B93301A23B8CE00532C80 /* Navigation.swift in Sources */,
 				F52B932E1A23B5B700532C80 /* Sauron.swift in Sources */,
 				F53D0E7C19E046F600593316 /* UIViewController+Segues.m in Sources */,
 				F53D0E7619E045D200593316 /* UIViewController+Utils.m in Sources */,
 				F53F637119E04B4C006416D1 /* MHJCharacterVC.m in Sources */,
 				F53D0E7219E0441700593316 /* MHJSauron.m in Sources */,
 				F53D0E5419E043C300593316 /* AppDelegate.m in Sources */,
+				F5E4A1021A6EE40D007E3728 /* Segues.swift in Sources */,
 				F53D0E5119E043C300593316 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -498,7 +506,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Sauron/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Sauron/Sauron-Bridging-Header.h";
@@ -512,7 +520,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Sauron/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Sauron/Sauron-Bridging-Header.h";
