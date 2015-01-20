@@ -104,7 +104,7 @@ extension UIViewController
     {
         if (controller?.isKindOfClass(UIViewController) != nil)
         {
-            if let optionalVC = controller?.isNavigationController()
+            if let optionalVC = controller as? UINavigationController
             {
                 let navVC = controller as UINavigationController
                 var nextVC = navVC.viewControllers.first as UIViewController
@@ -117,16 +117,6 @@ extension UIViewController
     }
     
     
-    // MARK: Booleans
-    
-    func isNavigationController() -> ObjCBool
-    {
-        if self.isKindOfClass(UINavigationController)
-        {
-            return true
-        }
-        return false
-    }
     
     
 }
