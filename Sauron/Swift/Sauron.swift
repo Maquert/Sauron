@@ -11,7 +11,8 @@ import UIKit
 
 
 
-class Sauron {
+class Sauron
+{
     
     
     // MARK: Switch
@@ -19,26 +20,24 @@ class Sauron {
     class func switchToStoryboard(name: String, identifier: String,
         completion:(nextController: UIViewController) -> UIViewController )
     {
-        var nextVC:UIViewController? = retrieveNextViewController(fromStoryboard: name, identifier: identifier)
-        
-        if nextVC != nil
+        if let nextVC: UIViewController = retrieveNextViewController(fromStoryboard: name, identifier: identifier)
         {
-            completion(nextController: nextVC!)
-            setRootWithController(nextVC!)
+            completion(nextController: nextVC)
+            setRootWithController(nextVC)
         }
     }
+    
     
     // MARK: Interrupt
     
     class func interruptWithStoryboard(name: String, identifier: String,
         completion:(nextController: UIViewController) -> UIViewController )
     {
-        var nextVC:UIViewController? = retrieveNextViewController(fromStoryboard: name, identifier: identifier)
-        
-        if nextVC != nil
+        if let nextVC:UIViewController = retrieveNextViewController(fromStoryboard: name,
+            identifier: identifier)
         {
-            completion(nextController: nextVC!)
-            appRootVC()?.presentViewController(nextVC!, animated: true, completion: nil)
+            completion(nextController: nextVC)
+            appRootVC()?.presentViewController(nextVC, animated: true, completion: nil)
         }
     }
     
@@ -77,25 +76,19 @@ class Sauron {
     
     class private func pushableViewController(controller: UIViewController) -> UIViewController?
     {
-        if controller.isNavigationController()
+        if let navVC = controller as? UINavigationController
         {
-            return controller
+            if let pushableVC = navVC.viewControllers.first as? UIViewController {
+                return pushableVC
+            }
         }
         return controller
     }
     
     
     
-    // MARK: Handy Methods
     
-    class func isNavigationController(controller: UIViewController?) -> Bool
-    {
-        if controller?.isKindOfClass(UINavigationController) != nil
-        {
-            return true;
-        }
-        return false;
-    }
+    // MARK: Handy Methods
     
     class private func navigationController(forViewController controller: UIViewController) -> UINavigationController
     {

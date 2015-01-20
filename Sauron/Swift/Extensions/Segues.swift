@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  UIViewController+Segues.swift
 //  Sauron
 //
 //  Created by Miguel Hernández Jaso on 20/01/15.
