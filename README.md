@@ -6,6 +6,7 @@ Sauron
 Civilized storyboard navigation
 
 Notice: Check 'SauronFramework' if you are only going to use iOS 8, since this ObjC & Swift version won't be supported anymore. Instead, I suggest to import Sauron as an iOS 8 framework when possible.
+https://github.com/Maquert/SauronFramework
 
 
 Description
