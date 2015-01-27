@@ -12,23 +12,27 @@ import UIKit
 extension UIViewController
 {
     
+    
     // MARK: Push
     
-    func pushToStoryboard(named: String, identifier: String,
-        completion:(nextController: UIViewController) -> UIViewController)
+    func pushToStoryboard(named: String, identifier: String?,
+        completion:( (nextController: UIViewController) -> Void)? )
     {
-        var nextVC = retrieveNextViewController(fromStoryboard: named, identifier: identifier)
-        
-        if nextVC != nil
+        if let nextController = retrieveNextViewController(fromStoryboard: named, identifier: identifier)
         {
-            completion(nextController: nextVC!)
-            if self.navigationController != nil {
-                self.navigationController?.pushViewController(nextVC!, animated: true)
+            if let aCompletionClasure = completion {
+                aCompletionClasure(nextController: nextController)
+            }
+            
+            if let currentNavigationController = self.navigationController {
+                currentNavigationController.pushViewController(nextController, animated: true)
             }
             else {
-                println("[\(self)] No navigation controller found.")
+                println("[Sauron] ERROR: No navigation controller found.")
             }
+            
         }
+        
         
     }
     
@@ -37,83 +41,81 @@ extension UIViewController
     // MARK: Present
     
     func presentStoryboard(named: String, identifier: String,
-        completion:(nextController: UIViewController) -> UIViewController)
+        completion:( (nextController: UIViewController) -> Void)? )
     {
-        var nextVC = retrieveNextViewController(fromStoryboard: named, identifier: identifier)
-        
-        if nextVC != nil
+        if let nextController = retrieveNextViewController(fromStoryboard: named, identifier: identifier)
         {
-            completion(nextController: nextVC!)
-            self.presentViewController(nextVC!, animated: true, completion: nil)
+            if let aCompletionClasure = completion {
+                aCompletionClasure(nextController: nextController)
+            }
+            
+            presentViewController(nextController, animated: true, completion: nil)
         }
-    
+        
     }
     
     
     // MARK: Hook
     
     func hookStoryboard(named: String, identifier: String,
-        completion:(nextController: UIViewController) -> UIViewController)
+        completion:( (nextController: UIViewController) -> Void)? )
     {
-        var nextVC = retrieveNextViewController(fromStoryboard: named, identifier: identifier)
-        
-        if nextVC != nil
+        if let nextController = retrieveNextViewController(fromStoryboard: named, identifier: identifier)
         {
-            completion(nextController: nextVC!)
-            let navVC = UINavigationController(rootViewController: nextVC!)
-            self.presentViewController(navVC, animated: true, completion: nil)
+            if let aCompletionClasure = completion {
+                aCompletionClasure(nextController: nextController)
+            }
+            
+            let navigationController = UINavigationController(rootViewController: nextController)
+            presentViewController(navigationController, animated: true, completion: nil)
         }
         
     }
-    
     
     
     
     // MARK: Instances
     
-    private func retrieveNextViewController(fromStoryboard name: String, identifier: String) -> UIViewController?
+    private func retrieveNextViewController(fromStoryboard name: String, identifier: String?) -> UIViewController?
     {
-        let storyboard = UIStoryboard(name: name, bundle: nil)
-        var nextVC = instantiateStoryboard(storyboard, anIdentifier: identifier)
-        nextVC = pushableVC(nextVC)
-        return nextVC
-    }
-    
-    private func instantiateStoryboard(storyboard: UIStoryboard, anIdentifier: String?) -> UIViewController?
-    {
-        var controller: AnyObject?
-        if let identifier = anIdentifier
-        {
-            controller = storyboard.instantiateViewControllerWithIdentifier(identifier)
-        } else
-        {
-            controller = storyboard.instantiateInitialViewController()
-        }
+        var storyboard: UIStoryboard? = nil
+        TryBlock.try( { () -> Void in
+            storyboard = UIStoryboard(name: name, bundle: nil)
+            }, catch: { (exception) -> Void in
+                storyboard = nil
+                println("[Sauron] ERROR: '\(name)' is not a valid storyboard.")
+            }, finally: nil)
         
-        if controller != nil
-        {
-            return controller as UIViewController!
-        } else
-        {
-            return nil
-        }
-    }
-    
-    
-    private func pushableVC(controller: UIViewController?) -> UIViewController?
-    {
-        if (controller?.isKindOfClass(UIViewController) != nil)
-        {
-            if let optionalVC = controller as? UINavigationController
-            {
-                let navVC = controller as UINavigationController
-                var nextVC = navVC.viewControllers.first as UIViewController
-                return nextVC;
+        if let aValidStoryboard = storyboard {
+            var optionalController = instantiateStoryboard(aValidStoryboard, identifier: identifier)
+            if let nextViewController = optionalController {
+                return pushableVC(nextViewController)
             }
-            return controller
+        }
+        return nil
+    }
+    
+    private func instantiateStoryboard(storyboard: UIStoryboard, identifier: String?) -> UIViewController?
+    {
+        if let anIdentifier = identifier
+        {
+            return storyboard.instantiateViewControllerWithIdentifier(anIdentifier) as? UIViewController
+        }
+        else {
+            return storyboard.instantiateInitialViewController() as? UIViewController
+        }
+    }
+    
+    
+    private func pushableVC(controller: UIViewController) -> UIViewController?
+    {
+        if let navigationController = controller as? UINavigationController
+        {
+            return navigationController.viewControllers.first as? UIViewController
         }
         
-        return nil
+        return controller
+        
     }
     
     
