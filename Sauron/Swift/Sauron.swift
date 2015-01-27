@@ -14,17 +14,19 @@ import UIKit
 class Sauron
 {
     
-    
     // MARK: Switch
     
-    class func switchToStoryboard(name: String, identifier: String,
-        completion:(nextController: UIViewController) -> UIViewController )
+    class func switchToStoryboard(name: String, identifier: String?,
+        completion:( nextController: UIViewController ) -> () ) -> UIViewController?
     {
         if let nextVC: UIViewController = retrieveNextViewController(fromStoryboard: name, identifier: identifier)
         {
             completion(nextController: nextVC)
             setRootWithController(nextVC)
+            return nextVC
         }
+        
+        return nil
     }
     
     
@@ -46,7 +48,7 @@ class Sauron
     
     // MARK: Instances
     
-    class func retrieveNextViewController(fromStoryboard name: String, identifier: String) -> UIViewController?
+    class func retrieveNextViewController(fromStoryboard name: String, identifier: String?) -> UIViewController?
     {
         let storyboard = UIStoryboard(name: name, bundle: nil)
         var nextVC = instantiateStoryboard(storyboard, anIdentifier: identifier)

@@ -101,8 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				F52B932D1A23B5B700532C80 /* Sauron.swift */,
-				F52B932F1A23B8CE00532C80 /* Navigation.swift */,
-				F5E4A1011A6EE40D007E3728 /* Segues.swift */,
+				F5FEC6091A777A3200D24ED2 /* Extensions */,
 				F52B932C1A23B5B700532C80 /* Sauron-Bridging-Header.h */,
 			);
 			name = Swift;
@@ -274,6 +273,15 @@
 				F5C6AB3119E175210067DFE5 /* Sauron.storyboard */,
 			);
 			name = Storyboard;
+			sourceTree = "<group>";
+		};
+		F5FEC6091A777A3200D24ED2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F52B932F1A23B8CE00532C80 /* Navigation.swift */,
+				F5E4A1011A6EE40D007E3728 /* Segues.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
