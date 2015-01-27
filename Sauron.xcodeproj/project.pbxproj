@@ -23,6 +23,7 @@
 		F5C6AB2E19E172F60067DFE5 /* Frodo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5C6AB2D19E172F60067DFE5 /* Frodo.storyboard */; };
 		F5C6AB3019E175140067DFE5 /* Gandalf.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5C6AB2F19E175140067DFE5 /* Gandalf.storyboard */; };
 		F5C6AB3219E175210067DFE5 /* Sauron.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5C6AB3119E175210067DFE5 /* Sauron.storyboard */; };
+		F5D776B71A7849A800CEAA24 /* TryBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D776B61A7849A800CEAA24 /* TryBlock.m */; };
 		F5E4A1021A6EE40D007E3728 /* Segues.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E4A1011A6EE40D007E3728 /* Segues.swift */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +69,8 @@
 		F5C6AB2F19E175140067DFE5 /* Gandalf.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Gandalf.storyboard; path = View/Storyboard/Gandalf.storyboard; sourceTree = "<group>"; };
 		F5C6AB3119E175210067DFE5 /* Sauron.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Sauron.storyboard; path = View/Storyboard/Sauron.storyboard; sourceTree = "<group>"; };
 		F5C6AB3519E19E630067DFE5 /* Sauron.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Sauron.h; path = Sauron/Sauron.h; sourceTree = "<group>"; };
+		F5D776B51A7849A800CEAA24 /* TryBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TryBlock.h; sourceTree = "<group>"; };
+		F5D776B61A7849A800CEAA24 /* TryBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TryBlock.m; sourceTree = "<group>"; };
 		F5E4A1011A6EE40D007E3728 /* Segues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Segues.swift; path = Swift/Extensions/Segues.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -100,6 +103,7 @@
 		F52B932B1A23B56000532C80 /* Swift */ = {
 			isa = PBXGroup;
 			children = (
+				F5D776B41A7849A800CEAA24 /* Exceptions */,
 				F52B932D1A23B5B700532C80 /* Sauron.swift */,
 				F5FEC6091A777A3200D24ED2 /* Extensions */,
 				F52B932C1A23B5B700532C80 /* Sauron-Bridging-Header.h */,
@@ -275,6 +279,16 @@
 			name = Storyboard;
 			sourceTree = "<group>";
 		};
+		F5D776B41A7849A800CEAA24 /* Exceptions */ = {
+			isa = PBXGroup;
+			children = (
+				F5D776B51A7849A800CEAA24 /* TryBlock.h */,
+				F5D776B61A7849A800CEAA24 /* TryBlock.m */,
+			);
+			name = Exceptions;
+			path = Swift/Exceptions;
+			sourceTree = "<group>";
+		};
 		F5FEC6091A777A3200D24ED2 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -389,6 +403,7 @@
 				F53D0E8019E047A100593316 /* UIViewController+Navigation.m in Sources */,
 				F53D0E8419E047EB00593316 /* MHJStoryboardBuilder.m in Sources */,
 				F52B93301A23B8CE00532C80 /* Navigation.swift in Sources */,
+				F5D776B71A7849A800CEAA24 /* TryBlock.m in Sources */,
 				F52B932E1A23B5B700532C80 /* Sauron.swift in Sources */,
 				F53D0E7C19E046F600593316 /* UIViewController+Segues.m in Sources */,
 				F53D0E7619E045D200593316 /* UIViewController+Utils.m in Sources */,
