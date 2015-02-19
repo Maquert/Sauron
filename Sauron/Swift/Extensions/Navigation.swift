@@ -40,7 +40,7 @@ extension UIViewController
     
     // MARK: Present
     
-    func presentStoryboard(named: String, identifier: String,
+    func presentStoryboard(named: String, identifier: String?,
         completion:( (nextController: UIViewController) -> Void)? )
     {
         if let nextController = retrieveNextViewController(fromStoryboard: named, identifier: identifier)
