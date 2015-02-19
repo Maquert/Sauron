@@ -17,13 +17,15 @@ class Sauron
     // MARK: Switch
     
     class func switchToStoryboard(name: String, identifier: String?,
-        completion:( nextController: UIViewController ) -> () ) -> UIViewController?
+        completion:( (nextController: UIViewController) -> Void)? ) -> UIViewController?
     {
-        if let nextVC: UIViewController = retrieveNextViewController(fromStoryboard: name, identifier: identifier)
+        if let nextController: UIViewController = retrieveNextViewController(fromStoryboard: name, identifier: identifier)
         {
-            completion(nextController: nextVC)
-            setRootWithController(nextVC)
-            return nextVC
+            if let aCompletionClasure = completion {
+                aCompletionClasure(nextController: nextController)
+            }
+            setRootWithController(nextController)
+            return nextController
         }
         
         return nil
@@ -33,13 +35,15 @@ class Sauron
     // MARK: Interrupt
     
     class func interruptWithStoryboard(name: String, identifier: String,
-        completion:(nextController: UIViewController) -> UIViewController )
+        completion:( (nextController: UIViewController) -> Void)? )
     {
-        if let nextVC:UIViewController = retrieveNextViewController(fromStoryboard: name,
+        if let nextController:UIViewController = retrieveNextViewController(fromStoryboard: name,
             identifier: identifier)
         {
-            completion(nextController: nextVC)
-            appRootVC()?.presentViewController(nextVC, animated: true, completion: nil)
+            if let aCompletionClasure = completion {
+                aCompletionClasure(nextController: nextController)
+            }
+            appRootVC()?.presentViewController(nextController, animated: true, completion: nil)
         }
     }
     
